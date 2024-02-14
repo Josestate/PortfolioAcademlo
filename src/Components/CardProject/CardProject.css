@@ -1,0 +1,20 @@
+.cardProjects__container{
+    background: rgb(73 115 133 / 33%);
+    padding-top: 10px;
+    color: rgb(23, 23, 36);
+    border-radius: 25px;
+    margin: 10px;
+    width: 30%;
+    img{
+        width: 70%;
+        border-radius: 25px;
+    }
+    h3{
+        width: 70%;
+        margin: 10px auto;
+        color: rgb(73, 115, 133);
+    }
+}
+.right{
+    align-self: end;
+}

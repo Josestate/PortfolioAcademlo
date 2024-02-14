@@ -1,0 +1,24 @@
+.home__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    .home__nameContainer{
+        width: 340px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        overflow: hidden;
+        transition: width 0.5s ease; 
+        .home__name{
+            margin: 0;
+            text-wrap: nowrap;
+        }
+    }
+    .home__line{
+        opacity: 1;
+        height: 100px;
+        display: inline-block;
+        border: 1px solid;
+    }
+}
