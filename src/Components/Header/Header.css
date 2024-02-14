@@ -1,0 +1,57 @@
+.header__container{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    width: 95%;
+    margin-inline: 2.5%;
+    background-color: #fff;
+    z-index: 3;
+    nav{
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+        border-bottom: 1px solid rgb(73, 115, 133);
+        .header__logoContainer{
+            cursor: pointer;
+            width: 50px;
+            p{
+                margin: 0;
+            }
+            .header__line{
+                border: 1px solid;
+            }
+        }
+        .header__list{
+            width: 40%;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            .header__item{
+                cursor: pointer;
+                &:hover{
+                   color: rgb(17, 36, 52);
+                }
+            }
+        }
+    }
+    .header__tooglerContainer{
+        justify-content: end;
+        display: flex;
+        .header__languageToogler{
+            margin: 10px;
+            color: #fff;
+            background-color: rgb(73, 115, 133);
+            text-align: center;
+            &:focus{
+                border: none;
+            }
+        }
+        .header__lightToogler{
+            margin: 10px;
+            color: #fff;
+            background-color: rgb(73, 115, 133);
+        }
+    }
+}

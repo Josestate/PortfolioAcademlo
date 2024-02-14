@@ -1,0 +1,71 @@
+.contact__container {
+    position: relative;
+    height: 620px;
+    margin-bottom: 200px;
+  .contact__textContainer {
+    width: 405px;
+    background: rgb(0 0 0 / 33%);
+    box-shadow: 0 0 10px 3px rgb(0 0 0 / 33%);
+    height: 300px;
+    margin: auto;
+    padding: 60px;
+
+    h2{
+        margin: 0;
+    }
+
+    h3 {
+        margin: 40px;
+    }
+  }
+  .contact__sectionEmail {
+    background: rgb(73 115 133 / 33%);
+    box-shadow: 0 0 10px 3px rgb(73 115 133 / 33%);
+    width: 405px;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-around;
+    position: absolute;
+    top: 360px;
+    left: 40%;
+
+    .contact__inputsCont{
+      width: 100%;
+      text-align: start;
+      .contact__inputs{
+        width: 100%;
+        background: #0000;
+        border: none;
+        border-bottom: 1px solid;
+      }
+    }
+    
+    .imgsContainer {
+        display: flex;
+        align-items: center;
+
+        .contact__imgs {
+            margin: 20px;
+            width: 90px;
+        }
+
+        .contact__imgs_insta {
+            width: 125px;
+        }
+        .contact__imgs_github{
+            width: 90px;
+        }
+    }
+  }
+ 
+
+  
+  @media all and (max-width: 600px) {
+    .contact__sectionEmail {
+      position: static;
+    }
+  }
+}
