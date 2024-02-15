@@ -2,8 +2,9 @@ import {React, useEffect, useState, useRef} from 'react';
 import '../Home/Home.css';
 // import circleImg from '../../assets/circleGame.png';
 // import triangleImg from '../../assets/triangle.png'
-
-export default function Home({homeRef}) {
+// import file from '../../CV'
+import download from '../../CV/JoseCV.pdf';
+export default function Home({homeRef, languageToogler}) {
     const [displayNoneName, setDisplayNoneName] = useState(true);
     const [displayerDomName, setDisplayerDomName] = useState(true);
     const [lineText, setLineText] = useState(false);
@@ -42,7 +43,7 @@ export default function Home({homeRef}) {
         </div>
         <span className="home__line" ref={lineRef}></span>
       </section>
-
+      <a href={download} download='JoseCV'>{languageToogler ? 'Download CV' : 'Descargar CV'}</a>
        {/* <div className="imgsContainer">
                 <a href="https://www.facebook.com/jose.cj.127648" target="_blank">
                     <img src={faceImg} className="contact__imgs" alt="facebook" />

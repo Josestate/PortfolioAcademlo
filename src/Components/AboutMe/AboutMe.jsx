@@ -4,7 +4,7 @@ import imgJS from '../../assets/JavaScriptlogo.png'
 import imgReact from '../../assets/Reacticon.png'
 import imgHtml from '../../assets/htmlLogo.png'
 import imgCSS from '../../assets/logocss.png'
-import imgGSAP from '../../assets/greensockicon.png'
+import imgGSAP from '../../assets/gsapIcon.png'
 import imgGitH from '../../assets/gitHub.png'
 import imgBOOTS from '../../assets/bootstraplogo.png'
 
