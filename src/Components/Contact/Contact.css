@@ -63,9 +63,10 @@
  
 
   
-  @media all and (max-width: 600px) {
+  @media all and (max-width: 768px) {
     .contact__sectionEmail {
       position: static;
+      margin: auto;
     }
   }
 }

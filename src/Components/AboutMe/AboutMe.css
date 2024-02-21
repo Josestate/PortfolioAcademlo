@@ -24,11 +24,14 @@
             }
             
         }
-        @media all and (max-width: 600px) {
-            .aboutme__imgsCont{
-                grid-template-columns: auto;
-                grid-gap: 60px;
-            }
-        }
     }
+}
+@media all and (max-width: 600px) {
+    .aboutMe__container{
+        flex-direction: column;
+        align-items: center;}
+        .aboutme__imgsCont{
+            grid-template-columns: auto;
+            grid-gap: 60px;
+        }
 }
