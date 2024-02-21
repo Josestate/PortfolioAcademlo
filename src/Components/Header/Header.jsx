@@ -1,7 +1,14 @@
 import React, { useContext, useState, useRef } from 'react';
 import '../Header/Header.css';
+import img from '../../assets/hamburger_menu.png'
 
 export default function Header({ languageToogler, setLanguageToogler, homeRef, aboutMeRef, portfolioRef, contactRef }) {
+    // let [window] = window.screen.width > 768 ? true : false;
+    const [tooglerLigth, setTooglerLight] = useState(true);
+    const languageBtnRef = useRef();
+    const [showingDisplayer, setShowingDisplayer] = useState(window.screen.width > 768 ? true : false)
+    // const [showHamburguerImg, setShowHamburguerImg] = useState(showingDisplayer)
+    const [showingHeader, setShowingHeader] = useState(false)
 
     const scrollToHome = () => {
         homeRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -16,9 +23,7 @@ export default function Header({ languageToogler, setLanguageToogler, homeRef, a
         contactRef.current.scrollIntoView({ behavior: 'smooth' });
     };
 
-    const [tooglerLigth, setTooglerLight] = useState(true);
-    const languageBtnRef = useRef();
-
+    console.log('showingDisplayer', showingDisplayer)
     const toogleLight = (e) => {
         setTooglerLight(!tooglerLigth);
         if (tooglerLigth) {
@@ -39,10 +44,11 @@ export default function Header({ languageToogler, setLanguageToogler, homeRef, a
     };
 
     console.log(languageToogler);
-
+    // console.log('showingHeader', showingHeader)
     return (
         <header className='header__container'>
-            <nav>
+            {!showingDisplayer && <img src={img} alt='' className='header__navDisplayer' onClick={() => setShowingHeader(!showingHeader)}/>}
+            <nav className={showingHeader ? 'header__nav' : 'header__nav displayNone'}>
                 <section className='header__logoContainer'>
                     <a href='#' >
                         <p>J</p>
@@ -50,7 +56,7 @@ export default function Header({ languageToogler, setLanguageToogler, homeRef, a
                     </a>
                 </section>
                 <ul className='header__list'>
-                <li className='header__item' onClick={scrollToHome}>{languageToogler ? 'Home' : 'inicio'}</li>
+                    <li className='header__item' onClick={scrollToHome}>{languageToogler ? 'Home' : 'inicio'}</li>
                     <li className='header__item' onClick={scrollToAbout}>{languageToogler ? 'About Me' : 'Sobre mi'}</li>
                     <li className='header__item' onClick={scrollToPortfolio}>{languageToogler ? 'Portfolio' : 'Portafolio'}</li>
                     <li className='header__item' onClick={scrollToContact}>{languageToogler ? 'Contact' : 'Contacto'}</li>

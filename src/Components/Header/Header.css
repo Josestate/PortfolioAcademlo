@@ -7,7 +7,13 @@
     margin-inline: 2.5%;
     background-color: #fff;
     z-index: 3;
-    nav{
+    text-align: left;
+    .header__navDisplayer{
+        width: 7%;
+        margin: 20px;
+    }
+    .header__nav{
+        text-align: center;
         align-items: center;
         display: flex;
         justify-content: space-around;
@@ -30,6 +36,8 @@
             justify-content: space-around;
             .header__item{
                 cursor: pointer;
+                border-bottom: 1px solid;
+                margin: 30px 0 30px 0;
                 &:hover{
                    color: rgb(17, 36, 52);
                 }
@@ -53,5 +61,22 @@
             color: #fff;
             background-color: rgb(73, 115, 133);
         }
+    }
+    .displayNone{
+        display: none;
+    }
+}
+
+@media all and (max-width: 768px){
+    .header__container{
+        .header__list{
+            flex-direction: column;
+            align-items: center;
+            .header__item{
+                border-bottom: 1px solid;
+                margin: 30px 0 30px 0;
+                width: 50%;
+            }
+        } 
     }
 }
