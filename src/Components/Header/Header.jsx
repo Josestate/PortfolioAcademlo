@@ -44,11 +44,10 @@ export default function Header({ languageToogler, setLanguageToogler, homeRef, a
     };
 
     console.log(languageToogler);
-    // console.log('showingHeader', showingHeader)
     return (
         <header className='header__container'>
             {!showingDisplayer && <img src={img} alt='' className='header__navDisplayer' onClick={() => setShowingHeader(!showingHeader)}/>}
-            <nav className={showingHeader ? 'header__nav' : 'header__nav displayNone'}>
+            <nav className={showingHeader == showingDisplayer ? 'displayNone' : 'header__nav'}>
                 <section className='header__logoContainer'>
                     <a href='#' >
                         <p>J</p>
