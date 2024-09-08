@@ -18,7 +18,7 @@ export default function Home({homeRef, languageToogler}) {
         setDisplayerDomName(!displayerDomName);
       }, 3000);
       displayNoneName
-          ? nameRef.current.style.width = '300px'
+          ? nameRef.current.style.width = displayerDomName ? '190px' : '260px'
         :  nameRef.current.style.width = 0;
         }, [displayNoneName]);
     useEffect(() => {
@@ -36,9 +36,9 @@ export default function Home({homeRef, languageToogler}) {
       <section className="home__container" id='home' ref={homeRef}>
         <div className="home__nameContainer" ref={nameRef}>
           {displayerDomName ? (
-          <h1 className="home__name name_realName">Jose Pablo</h1>
+          <h1 className="home__name name_realName">Joseco</h1>
           ) : (
-          <h1 className="home__name name_profession">Front-end</h1>
+          <h1 className="home__name name_profession">Software</h1>
           )}
         </div>
         <span className="home__line" ref={lineRef}></span>

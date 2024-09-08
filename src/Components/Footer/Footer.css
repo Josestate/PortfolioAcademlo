@@ -1,0 +1,120 @@
+.footer__container{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+  background: rgb(73 115 133 / 33%);
+  align-items: center;
+  margin-bottom: 0;
+  height: 450px;
+  .footer__textContainer{
+    background: #ffffff87;
+    padding: 10px;
+    box-shadow: 0 0 10px 1px;
+    height: auto;
+  }
+  .footer__sectionEmail{
+    background: #ffffff87;
+    padding: 10px 30px;
+    box-shadow: 0 0 10px 1px;
+    height: 270px;
+    .footer__inputsCont{
+      display: grid;
+      text-align: start;
+    }
+  }
+}
+
+
+@media (max-width: 600px) {
+  .footer__container{
+    padding: 20px;
+    flex-direction: column;
+    gap: 40px;
+    height: auto;
+  }
+  .footer__sectionEmail{
+    width: -webkit-fill-available;
+  }
+}
+
+
+
+/* .footer__container {
+    position: relative;
+    height: 620px;
+    margin: 100px 0;
+    margin-bottom: 200px;
+  .footer__textContainer {
+    width: 405px;
+    background: rgb(0 0 0 / 33%);
+    box-shadow: 0 0 10px 3px rgb(0 0 0 / 33%);
+    height: 400px;
+    margin: auto;
+    padding: 60px;
+
+    h2{
+        margin: 0;
+    }
+
+    h3 {
+        margin: 40px;
+    }
+  }
+  .footer__sectionEmail {
+    background: rgb(73 115 133 / 33%);
+    box-shadow: 0 0 10px 3px rgb(73 115 133 / 33%);
+    width: 405px;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+    justify-content: space-around;
+    position: absolute;
+    top: 360px;
+    left: 40%;
+
+    .footer__inputsCont{
+      width: 100%;
+      text-align: start;
+      .footer__inputs{
+        width: 100%;
+        background: #0000;
+        border: none;
+        border-bottom: 1px solid;
+      }
+    }
+    
+    .imgsContainer {
+        display: flex;
+        align-items: center;
+
+        .footer__imgs {
+            margin: 20px;
+            width: 90px;
+        }
+
+        .footer__imgs_insta {
+            width: 125px;
+        }
+        .footer__imgs_github{
+            width: 90px;
+        }
+    }
+  }
+ 
+
+  
+  @media all and (max-width: 768px) {
+    .footer__sectionEmail {
+      position: static;
+      margin: auto;
+      width: -webkit-fill-available;
+    }
+    .footer__textContainer{
+      padding: 0;
+      width: fit-content;
+      margin: 0;
+    }
+  }
+} */
