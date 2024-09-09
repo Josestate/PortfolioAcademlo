@@ -29,7 +29,7 @@ export default function Header({ logoRef, languageToogler, setLanguageToogler, h
     console.log(tooglerLigth, 'tooglerLigth');
     return (
         <header className='header__container' ref={headerComp} style={{backgroundImage: `url(${tooglerLigth ? '/images/Josecowhite.png' : '/images/Josecoblack.png'})`}}>
-            {!showingDisplayer && <img src='../../../public/images/hamburger_menu.png' alt='' className='header__navDisplayer' onClick={() => setShowingHeader(!showingHeader)}/>}
+            {!showingDisplayer && <img src='/images/hamburger_menu.png' alt='' className='header__navDisplayer' onClick={() => setShowingHeader(!showingHeader)}/>}
             <nav className= {showingHeader == showingDisplayer ? 'displayNone' : 'header__nav'}>
                 <section className='header__logoContainer'>
                     <a href='#' ref={logoRef}>
