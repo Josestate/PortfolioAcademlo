@@ -1,4 +1,5 @@
 import React, { useContext, useState, useRef } from 'react';
+import Logo3d from '../Logothree/Logothree'
 import '../Header/Header.css';
 
 export default function Header({ logoRef, languageToogler, setLanguageToogler, homeRef, aboutMeRef, portfolioRef, footerRef, headerComp, languageBtnRef, tooglerLigth, toogleLight }) {
@@ -31,21 +32,23 @@ export default function Header({ logoRef, languageToogler, setLanguageToogler, h
         <header className='header__container' ref={headerComp} style={{backgroundImage: `url(${tooglerLigth ? '/images/Josecowhite.png' : '/images/Josecoblack.png'})`}}>
             {!showingDisplayer && <img src='/images/hamburger_menu.png' alt='' className='header__navDisplayer' onClick={() => setShowingHeader(!showingHeader)}/>}
             <nav className= {showingHeader == showingDisplayer ? 'displayNone' : 'header__nav'}>
+            {/* <nav className= 'header__nav'> */}
                 <section className='header__logoContainer'>
                     <a href='#' ref={logoRef}>
-                        <p>J</p>
-                        <div className='header__line'></div>
+                        <Logo3d tooglerLigth={tooglerLigth}/>
+                        {/* <img src={tooglerLigth ? '/images/logoWh.png' : '/images/logoBl.png'} alt="" className='header__logo' /> */}
                     </a>
                 </section>
                 <ul className='header__list'>
                     <li className='header__item' onClick={scrollToHome}>{languageToogler ? 'Home' : 'inicio'}</li>
+                    <li className='header__item' onClick={scrollToPortfolio}>{languageToogler ? 'Skills' : 'Habilidades'}</li>
+                    <li className='header__item' onClick={scrollToPortfolio}>{languageToogler ? 'Projects' : 'Proyectos'}</li>
                     <li className='header__item' onClick={scrollToAbout}>{languageToogler ? 'About Me' : 'Sobre mi'}</li>
-                    <li className='header__item' onClick={scrollToPortfolio}>{languageToogler ? 'Portfolio' : 'Portafolio'}</li>
                     <li className='header__item' onClick={scrollToContact}>{languageToogler ? 'Contact' : 'Contacto'}</li>
                 </ul>
                 <section className='header__tooglerContainer'>
                     <button className='header__languageToogler' onClick={(e) => setLanguageToogler(!languageToogler)} ref={languageBtnRef}>{languageToogler ? 'Español' : 'English'}</button>
-                    <button className='header__lightToogler' onClick={(e) => toogleLight(e)}>{(tooglerLigth ? (languageToogler ? 'Dark' : 'Oscuro') : (languageToogler ? 'Light' : 'Claro'))}</button>
+                    <button className='header__lightToogler' onClick={(e) => toogleLight(e)} style={{color: tooglerLigth ? '#fff' : '#000'}}>{(tooglerLigth ? (languageToogler ? 'Dark' : 'Oscuro') : (languageToogler ? 'Light' : 'Claro'))}</button>
                 </section>
             </nav>
         </header>

@@ -8,6 +8,7 @@ import './App.css'
 import Projects from './Components/Projects/Projects'
 import AboutMe from './Components/AboutMe/AboutMe'
 import Footer from './Components/Footer/Footer';
+import Skills from './Components/Skills/Skills';
 
 function App() {
   let [languageToogler, setLanguageToogler] = useState(true);
@@ -72,8 +73,9 @@ useEffect(() => {
       <main className='main_container' ref={mainRef} style={{backgroundImage: `url(${tooglerLigth ? '/images/Josecowhite.png' : '/images/Josecoblack.png'})`}}>
         <Header logoRef={logoRef} languageToogler={languageToogler} setLanguageToogler={setLanguageToogler} toogleLight={toogleLight} tooglerLigth={tooglerLigth} homeRef={homeRef} aboutMeRef={aboutMeRef} portfolioRef={portfolioRef} footerRef={footerRef} headerComp={headerComp} languageBtnRef={languageBtnRef}/>
         <Home languageToogler={languageToogler} homeRef={homeRef}/>
-        <AboutMe languageToogler={languageToogler} aboutMeRef={aboutMeRef}/>
+        <Skills languageToogler={languageToogler} />
         <Projects languageToogler={languageToogler} portfolioRef={portfolioRef}/>
+        <AboutMe languageToogler={languageToogler} aboutMeRef={aboutMeRef}/>
         <Footer languageToogler={languageToogler} footerRef={footerRef}/>
       </main>
   )

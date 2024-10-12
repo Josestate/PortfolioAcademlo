@@ -1,10 +1,8 @@
 .header__container{
     position: fixed;
-    width: 100%;
     top: 0;
     left: 0;
-    width: 95%;
-    margin-inline: 2.5%;
+    width: 100%;
     z-index: 3;
     text-align: left;
     border-bottom: 1px solid;
@@ -21,14 +19,8 @@
         .header__logoContainer{
             cursor: pointer;
             width: 50px;
-            a{
-                color: rgb(73, 115, 133);
-                p{
-                    margin: 0;
-                }
-            }
-            .header__line{
-                border: 1px solid;
+            .header__logo{
+                width: 100px;
             }
         }
         .header__list{
@@ -69,11 +61,15 @@
     }
 }
 
-@media all and (max-width: 768px){
+@media all and (max-width: 875px){
     .header__container{
         .header__nav{
-            height: 90vh;
+            height: 100vh;
             flex-direction: column;
+            .header__logoContainer{
+                display: flex;
+                justify-content: center;
+            }
         }
         .header__list{
             flex-direction: column;
