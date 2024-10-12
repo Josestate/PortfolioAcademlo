@@ -33,42 +33,17 @@ export default function Home({homeRef, languageToogler}) {
     
   return (
   <>
-      <section className="home__container" id='home' ref={homeRef}>
-        <div className="home__nameContainer" ref={nameRef}>
-          {displayerDomName ? (
+    <section className="home__container" id='home' ref={homeRef}>
+      <div className="home__nameContainer" ref={nameRef}>
+        {displayerDomName ? (
           <h1 className="home__name name_realName">Joseco</h1>
           ) : (
           <h1 className="home__name name_profession">Software</h1>
-          )}
+        )}
         </div>
         <span className="home__line" ref={lineRef}></span>
       </section>
       <a href={download} download='JoseCV'>{languageToogler ? 'Download CV' : 'Descargar CV'}</a>
-       {/* <div className="imgsContainer">
-                <a href="https://www.facebook.com/jose.cj.127648" target="_blank">
-                    <img src={faceImg} className="contact__imgs" alt="facebook" />
-                </a>
-                <a href="https://www.instagram.com/invites/contact/?i=tpo4mk7flr&utm_content=r9hik5i"
-                    target="_blank">
-                    <img
-                    src={instaImg}
-                    className="contact__imgs_insta"
-                    alt="instagram"
-                    />
-                </a>
-            </div>
-            <div className="imgsContainer">
-                <a href="https://wa.link/qo8ph2" target="_blank">
-                    <img src={whatssImg} className="contact__imgs" alt="whatsapp" />
-                </a>
-                <a href="https://www.linkedin.com/in/jos%C3%A9-castillo-a1463526b/"
-                    target="_blank">
-                    <img src={linkelnImg} className="contact__imgs" alt="linkedin" />
-                </a>
-                <a href="https://github.com/Josestate" target="_blank">
-                    <img src={gitHubImg} className="contact__imgs_github" alt="gitHub" />
-                </a>
-            </div> */}
   </>
   )
 }
